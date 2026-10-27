@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Drone-PUR: From Visual Clue Discovery to Understanding and Reasoning in UAV Scenes. A dataset and benchmark spanning 11 tasks, three capability dimensions and diverse aerial observations.">
+  <meta property="og:title" content="Drone-PUR: From Visual Clue Discovery to Understanding and Reasoning in UAV Scenes">
+  <meta property="og:description" content="11 UAV tasks. Three capability dimensions. Discover, interpret and integrate visual clues.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://drone-pur.github.io/">
+  <meta property="og:image" content="https://drone-pur.github.io/assets/overview.webp">
+  <link rel="canonical" href="https://drone-pur.github.io/">
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Drone-PUR: From Visual Clue Discovery to Understanding and Reasoning in UAV Scenes</title>
+  <script src="./site-config.js" defer></script>
+  <script src="./cases.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Main navigation">
+      <a class="wordmark" href="#top" aria-label="Drone-PUR home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>Drone-PUR</a>
+      <button class="menu-toggle" type="button" aria-controls="nav-links" aria-expanded="false" aria-label="Open navigation"><span></span><span></span></button>
+      <div class="nav-links" id="nav-links"><a href="#overview">Overview</a><a href="#examples">Examples</a><a href="#benchmark">Benchmark</a><a href="#baseline">Model</a><a href="#citation">Citation</a></div>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero container" id="top" aria-labelledby="project-title">
+      <h1 id="project-title"><span class="project-name">Drone-<span class="p">P</span><span class="u">U</span><span class="r">R</span></span>
+<span class="project-subtitle">From Visual Clue Discovery to<br class="desktop-break"> Understanding and Reasoning in UAV Scenes</span></h1>
+      <div class="authors" aria-label="Authors">
+        <span>Jiahe Wu<sup>1</sup></span><span>Bing Cao<sup>1</sup></span><span>Xingyue Guo<sup>2,6</sup></span><span>Ruipu Zhao<sup>1</sup></span><span>Beiming Yu<sup>1</sup></span><span>Jiekang Feng<sup>1,5</sup></span><span>Qinghua Hu<sup>1</sup></span><span>Pengfei Zhu<sup>1,3,4,5,†</sup></span>
+      </div>
+      <div class="affiliations"><span><sup>1</sup>Tianjin University</span><span><sup>2</sup>Nankai University</span><span><sup>3</sup>Southeast University</span><span><sup>4</sup>Low-Altitude Intelligence Laboratory, Xiong’an National Innovation Center</span><span><sup>5</sup>Xiong’an Guochuang Lantian Technology Company Ltd.</span><span><sup>6</sup>Nanyang Technological University</span></div>
+      <p class="correspondence"><sup>†</sup>Corresponding author</p>
+      <div class="resource-links" id="resource-links" aria-label="Project resources"></div>
+      <figure class="teaser">
+        <button class="figure-button" data-zoom="./assets/overview.webp" data-caption="Drone-PUR capability framework and model evaluation" aria-label="Enlarge the Drone-PUR overview figure"><img src="./assets/overview.webp" alt="Drone-PUR organizes visual clue discovery, semantic interpretation and evidence integration into perception, understanding and reasoning. A three-dimensional model comparison and a ten-task radar plot summarize evaluation." width="2575" height="850" fetchpriority="high"></button>
+        
+      </figure>
+      <div class="facts" aria-label="Dataset at a glance"><div><strong>11</strong><span>UAV tasks</span></div><div><strong>3</strong><span>Capability dimensions</span></div><div><strong>175,213</strong><span>Training samples</span></div><div><strong>20,051</strong><span>Test samples</span></div><div><strong>22</strong><span>General-purpose VLMs</span></div></div>
+    </section>
+
+    <section class="section container" id="overview" aria-labelledby="overview-title">
+      <div class="section-heading"><h2 id="overview-title">Introduction</h2></div>
+      <div class="intro-text"><p>Small targets, subtle attributes and changing viewpoints make UAV imagery challenging for vision–language models. Reliable answers require models to discover task-relevant visual clues, interpret their semantic and spatial meaning, and connect multiple observations to support a conclusion.</p><p><strong>Drone-PUR</strong> is a dataset and benchmark organized around these three capability dimensions. Its 11 tasks span single images, image sequences, aligned RGB–thermal observations and synchronized UAV views. Training resources and complementary multiple-choice and open-ended evaluations support both capability assessment and domain adaptation.</p></div>
+      <div class="capability-definitions"><article class="capability perception"><span class="cap-number">P</span><h3>Perception</h3><p>Discover objects and extract categories, attributes, counts and locations.</p><ul class="task-names"><li>Object Detection</li><li>Object Recognition</li><li>Object Counting</li><li>Multi-Image Grounding</li></ul></article><article class="capability understanding"><span class="cap-number">U</span><h3>Understanding</h3><p>Align visual clues with compound descriptions and spatial concepts.</p><ul class="task-names"><li>Conditional Judgment</li><li>Position Spatial Judgment</li><li>Visual Grounding</li></ul></article><article class="capability reasoning"><span class="cap-number">R</span><h3>Reasoning</h3><p>Integrate multiple visual clues to infer explanations and situations.</p><ul class="task-names"><li>Causal Reasoning</li><li>Situational Inference</li><li>Multimodal Reasoning</li><li>Multi-view Reasoning</li></ul></article></div>
+    </section>
+
+    <section class="examples-band" id="examples" aria-labelledby="examples-title"><div class="container">
+      <div class="section-heading"><h2 id="examples-title">Examples</h2></div>
+      <div class="example-browser" id="example-browser" tabindex="0" aria-label="Interactive Drone-PUR task examples">
+        <div class="example-toolbar"><div class="dimension-tabs" aria-label="Choose a capability dimension"><button type="button" data-dimension="perception" aria-pressed="false">Perception</button><button type="button" data-dimension="understanding" aria-pressed="false">Understanding</button><button type="button" data-dimension="reasoning" aria-pressed="true">Reasoning</button></div><div class="case-navigation"><span id="case-counter" aria-live="polite">8 / 11</span><button type="button" id="previous-case" aria-label="Previous example">←</button><button type="button" id="next-case" aria-label="Next example">→</button></div></div>
+        <div class="task-switcher" id="task-switcher" aria-label="Choose a task"></div>
+        <div class="case-content"><div class="case-visual"><div class="case-images" id="case-images"></div></div><div class="case-description"><h3 id="case-title">Causal Reasoning</h3><p class="field-label">QUESTION</p><p class="case-question" id="case-question"></p><button class="answer-toggle" id="answer-toggle" type="button" aria-expanded="false" aria-controls="reference-answer">Show reference answer <span aria-hidden="true">↗</span></button><div class="reference-answer" id="reference-answer" hidden><p class="field-label">REFERENCE ANSWER</p><p id="case-answer"></p></div></div></div>
+      </div>
+    </div></section>
+
+    <section class="section container" id="benchmark" aria-labelledby="benchmark-title">
+      <div class="section-heading"><h2 id="benchmark-title">Drone-PUR Benchmark</h2></div>
+      <div class="benchmark-copy"><p>Drone-PUR brings together <strong>168K images and 620K bounding-box annotations</strong>. Around <strong>90.2%</strong> of task-relevant boxes occupy less than 1% of an image, reflecting the fine-grained demands of UAV observation. Training and test splits are disjoint at the image and video levels.</p><p><strong>All test samples are human-reviewed.</strong> The Position Spatial Judgment task is entirely human-annotated and covers vehicle heading, pedestrian heading, turning direction, object-relative position and vertical-level comparison. Evaluation combines ten multiple-choice tasks with direct detection, grounding and counting.</p></div>
+      <figure class="wide-figure"><button class="figure-button" data-zoom="./assets/task-overview.webp" data-caption="All 11 tasks in Drone-PUR" aria-label="Enlarge the eleven-task overview"><img src="./assets/task-overview.webp" alt="Eleven Drone-PUR tasks grouped into perception, understanding and reasoning, with original example images, questions and reference answers." width="2575" height="1510" loading="lazy"></button><figcaption>The 11-task overview</figcaption></figure>
+      
+      <figure class="wide-figure statistics-figure"><button class="figure-button" data-zoom="./assets/dataset-statistics.webp" data-caption="Statistical overview of the Drone-PUR dataset." aria-label="Enlarge dataset statistics"><img src="./assets/dataset-statistics.webp" alt="Image sources, task distributions, proportions of human-authored or revised samples, and normalized region areas." width="2575" height="715" loading="lazy"></button><figcaption>Statistical overview of the Drone-PUR dataset.</figcaption></figure>
+    </section>
+
+    <section class="section section-ruled container" id="baseline" aria-labelledby="baseline-title"><div class="section-heading"><h2 id="baseline-title">UAV-PUR: a unified adaptation baseline.</h2></div><div class="baseline-layout"><div><p>Built on Qwen3-VL at the 4B and 8B scales, <strong>UAV-PUR</strong> combines stage-wise fine-tuning with geometric and numerical auxiliary supervision. All tasks retain the original language-generation interface at inference.</p><ol class="training-stages"><li><span>01</span><div><h3>Perception adaptation</h3><p>Strengthen visual clue discovery through perception tasks.</p></div></li><li><span>02</span><div><h3>Joint capability learning</h3><p>Train across all three dimensions with eligible auxiliary supervision.</p></div></li><li><span>03</span><div><h3>Final consolidation</h3><p>Continue with language-generation supervision alone.</p></div></li></ol></div><figure><button class="figure-button" data-zoom="./assets/training-framework.webp" data-caption="UAV-PUR training and inference framework" aria-label="Enlarge the UAV-PUR framework"><img src="./assets/training-framework.webp" alt="UAV-PUR uses training-only grounding, counting and detection heads during the first two stages, and the original language modeling head at inference." width="1512" height="1080" loading="lazy"></button></figure></div></section>
+
+    
+
+    <section class="section section-ruled container citation-section" id="citation" aria-labelledby="citation-title"><div class="citation-heading"><div class="section-heading"><h2 id="citation-title">BibTeX</h2></div><button class="copy-button" id="copy-citation" type="button">Copy BibTeX</button></div><pre><code id="bibtex">@misc{wu2026dronepur,
+  title  = {Drone-PUR: From Visual Clue Discovery to
+            Understanding and Reasoning in UAV Scenes},
+  author = {Jiahe Wu and Bing Cao and Xingyue Guo and Ruipu Zhao
+            and Beiming Yu and Jiekang Feng and Qinghua Hu and Pengfei Zhu},
+  year   = {2026},
+  url    = {https://drone-pur.github.io/}
+}</code></pre></section>
+  </main>
+  <footer class="site-footer container"><a class="wordmark" href="#top">Drone-PUR</a><a href="mailto:wujiahe@tju.edu.cn">Contact the authors <span aria-hidden="true">↗</span></a></footer>
+  <dialog class="image-dialog" id="image-dialog" aria-labelledby="image-dialog-caption"><div class="image-dialog-toolbar"><p id="image-dialog-caption"></p><button type="button" id="close-image" aria-label="Close enlarged image">✕</button></div><div class="image-dialog-content"><img id="enlarged-image" alt=""></div></dialog>
+  <dialog class="resource-dialog" id="resource-dialog" aria-labelledby="resource-dialog-title"><button type="button" class="dialog-close" id="close-resource" aria-label="Close resource information">✕</button><h2 id="resource-dialog-title"></h2><p id="resource-dialog-message"></p><p class="release-status">Coming soon</p><a id="manuscript-link" href="./assets/drone-pur-paper.pdf" target="_blank" rel="noopener noreferrer" hidden>Read manuscript PDF ↗</a><a href="mailto:wujiahe@tju.edu.cn">Contact the authors <span aria-hidden="true">↗</span></a></dialog>
+  <div class="sr-only" role="status" aria-live="polite" id="announcement"></div>
+</body>
+</html>
