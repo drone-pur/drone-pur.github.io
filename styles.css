@@ -53,3 +53,17 @@ dialog{color:var(--ink);border:1px solid var(--line);padding:0;border-radius:8px
 @media(max-width:900px){.nav-links{gap:19px}.nav-links a{font-size:14px}.authors{font-size:17px}.affiliations{font-size:14px}.capability-definitions{gap:24px}.task-names{font-size:16px}.capability h3{font-size:21px}}
 @media(max-width:650px){.nav-links a{font-size:16px}.authors{font-size:16px}.affiliations{font-size:14px}.correspondence{font-size:13px}.resource-button{font-size:13px}.resource-button svg{width:14px;height:14px}.facts span{font-size:13px}.intro-text{font-size:17px}.capability h3{font-size:21px;margin-bottom:8px}.capability p{font-size:16px}.task-names{font-size:16px;margin-top:13px}.capability-definitions{gap:27px}.benchmark-copy,.baseline-layout>div>p{font-size:16px}.wide-figure figcaption,.teaser figcaption{font-size:15px}.training-stages h3{font-size:16px}.training-stages p{font-size:15px}.task-group h4{font-size:14px}.task-buttons button{font-size:14px;padding:8px 10px}.task-groups{gap:12px}.subtype-tag{font-size:13px}.sample-id-tag{font-size:12px}.sample-navigation>span{font-size:13px}.image-actions button,.distractors-toggle{font-size:14px}.bbox-legend,.sample-gallery figcaption{font-size:13px}.sample-panel .sample-copy .field-label{font-size:15px}.sample-question>p:last-child,.sample-answer>p:last-child{font-size:17px}.sample-answer .coordinate-answer{font-size:13px!important}#distractor-list li{font-size:15px}.leaderboard-table{min-width:1030px}.leaderboard-table tbody th{min-width:218px}.leaderboard-table th,.leaderboard-table td{font-size:14px}.leaderboard-table thead th{font-size:13px}.leaderboard-table tbody .board-average strong{font-size:15px}.leaderboard-heading>span{font-size:12px}.board-rank{font-size:11px}.citation-section pre{font-size:13px}.image-dialog-toolbar{font-size:14px}}
 @media(max-width:360px){.task-groups{grid-template-columns:1fr;gap:17px}.task-group h4{font-size:16px;margin-bottom:7px}.task-group:last-child{grid-column:auto}}
+
+/* Shared figure and reading edges, with restrained justified prose. */
+:root{--max:1080px}
+.section-heading,.intro-text,.benchmark-copy{max-width:none}
+.intro-text,.benchmark-copy{width:100%}
+.intro-text p,.benchmark-copy p,.baseline-layout>div>p,.sample-question>p:last-child,.sample-answer>p:last-child{text-align:justify;text-align-last:start;text-justify:inter-word;hyphens:none}
+.wide-figure figcaption,.statistics-figure figcaption{max-width:none;margin-inline:0;text-align:justify;text-align-last:start;text-justify:inter-word;hyphens:none}
+.sample-answer .coordinate-answer{text-align:start;hyphens:none}
+.capability-definitions{align-items:start}
+.capability p{min-height:3.6em}
+.wide-figure{padding-inline:0}
+@media(min-width:1500px){:root{--max:1120px}}
+@media(max-width:900px){.capability p{min-height:7.2em}}
+@media(max-width:650px){.intro-text p,.benchmark-copy p,.baseline-layout>div>p,.sample-question>p:last-child,.sample-answer>p:last-child,.wide-figure figcaption,.statistics-figure figcaption{text-align:start;hyphens:none}.capability p{min-height:0}.teaser{margin-inline:0}}
