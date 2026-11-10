@@ -2268,10 +2268,10 @@ window.DRONE_PUR_TASKS = [
                 "kind": "question",
                 "label": "Target",
                 "xyxy": [
-                  0.4852,
-                  0.2389,
-                  0.4922,
-                  0.2694
+                  0.5214,
+                  0.7917,
+                  0.5854,
+                  0.8389
                 ]
               }
             ]
